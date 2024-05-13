@@ -1,19 +1,33 @@
 import turtle
+
 tina = turtle.Turtle()
+tommy = turtle.Turtle()
+
+tina.color('darkviolet')
+tommy.color('blue')
+
 tina.shape('turtle')
+tommy.shape('turtle')
+
+tina.begin_fill()
+tina.goto(200,0)
+tina.goto(200,-200)
+tina.goto(-200,-200)
+tina.goto(-200,0)
+tina.goto(0,0)
+tina.end_fill()
+
+tommy.penup()
+tommy.goto(-70,100)
+tommy.write("Tina, let's Make a picture together!")
+tommy.goto(0,50)
+tommy.pendown()
 
 tina.penup()
-tina.goto(-60,175)
-
-def say(something):
-    x, y = tina.pos()
-    tina.write("You told me to say this:")
-    tina.goto(x + 10, y -10)
-    tina.write(something)
-    tina.goto(x, y - 25)
-
-say("Hi there!")
-say("Hi there!")
-say("Hi there!")
+tina.color('white')
+tina.goto(-40,-100)
+tina.write("Alright, I'm ready!!")
+tina.goto(0,-130)
+tina.pendown()
 
 tina.done()
