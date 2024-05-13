@@ -1,16 +1,32 @@
 import turtle
 
 tina = turtle.Turtle()
+tina.shape('turtle')
+tina.penup()
 
-Guess = int(input("What is 2 X 7?"))
+try:
+    how_high = int(input("How high should Tina go? (Use numbers between 200 and -200): "))
+    tina.pendown()
+    tina.goto(0, how_high)
+    height = tina.ycor()
 
-if Guess == 2*7:
-    tina.write(str(Guess) + ' is correct!')
-    tina.penup()
-    tina.backward(10)
-else:
-    tina.write('You said ' + str(Guess) + '. I got ' + str(2*7))
-    tina.penup()
-    tina.backward(10)
+    if height > 150 and height <= 200:
+        tina.write("This is very high!")
+    elif height > 100 and height <= 150:
+        tina.write("This is high!")
+    elif height > 0 and height <= 100:
+        tina.write("This is high but not too high!")
+    elif height > -100 and height <= 0:
+        tina.write("This is low but not too low!")
+    elif height > -150 and height <= -100:
+        tina.write("This is low!")
+    elif height >= -200 and height <= -150:
+        tina.write("This is very low!")
+    else:
+        raise ValueError
+except ValueError:
+    tina.backward(100)
+    tina.write("Hey, that's not a number between 200 and -200!")
+    tina.backward(20)
 
 turtle.done()
