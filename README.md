@@ -35,3 +35,4 @@ turtle.done()
 
 ![image](https://github.com/Leda909/turtle_python/assets/65784743/cac192f5-c531-4c01-b931-42906e358e37)
 
+![image](https://github.com/Leda909/turtle_printing/assets/65784743/f67e19e8-5881-4fcc-b054-a221a182e0e6)
