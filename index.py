@@ -1,32 +1,16 @@
 import turtle
-
-tina = turtle.Turtle()
+tina=turtle.Turtle()
 tina.shape('turtle')
-tina.penup()
+tina.color('purple')
 
-try:
-    how_high = int(input("How high should Tina go? (Use numbers between 200 and -200): "))
-    tina.pendown()
-    tina.goto(0, how_high)
-    height = tina.ycor()
+def triangle():
+    tina.left(60)
+    tina.forward(30)
+    tina.left(120)
+    tina.forward(30)
+    tina.left(120)
+    tina.forward(30)
 
-    if height > 150 and height <= 200:
-        tina.write("This is very high!")
-    elif height > 100 and height <= 150:
-        tina.write("This is high!")
-    elif height > 0 and height <= 100:
-        tina.write("This is high but not too high!")
-    elif height > -100 and height <= 0:
-        tina.write("This is low but not too low!")
-    elif height > -150 and height <= -100:
-        tina.write("This is low!")
-    elif height >= -200 and height <= -150:
-        tina.write("This is very low!")
-    else:
-        raise ValueError
-except ValueError:
-    tina.backward(100)
-    tina.write("Hey, that's not a number between 200 and -200!")
-    tina.backward(20)
+triangle()
 
 turtle.done()
