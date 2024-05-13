@@ -1,14 +1,23 @@
 import turtle
+
 tina = turtle.Turtle()
 tina.shape('turtle')
+tina.color('orange')
 
-colors = ["red", "orange", "yellow", "green", "blue", "purple", "black"]
+tina.left(90)
+tina.forward(100)
+tina.write("I'm Tina!")
+tina.forward(20)
+tina.right(90)
 
-for each_color in colors:
-    angle = 360 / len(colors)
-    tina.color(each_color)
-    tina.circle(40)
-    tina.right(angle)
-    tina.forward(30)
+tommy = turtle.Turtle()
+tommy.shape('turtle')
+tommy.color('blue')
+
+tommy.right(90)
+tommy.forward(100)
+tommy.write("I'm Tommy!")
+tommy.forward(20)
+tommy.left(90)
 
 turtle.done()
