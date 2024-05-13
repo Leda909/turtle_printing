@@ -1,30 +1,19 @@
 import turtle
-tina=turtle.Turtle()
+tina = turtle.Turtle()
 tina.shape('turtle')
 
-def make_cake(x=0, y=0):
-    tina.penup()
-    tina.color('pink')
-    tina.goto(x, y)
-    tina.pendown()
-    tina.begin_fill()
-    tina.goto(x + 20, y)
-    tina.goto(x + 20, y + 20)
-    tina.goto(x - 20, y + 20)
-    tina.goto(x - 20, y)
-    tina.goto(x, y)  
-    tina.end_fill()
-    tina.goto(x, y + 20)
-    tina.color('yellow')
-    tina.goto(x, y + 35)
-    tina.goto(x, y + 30)
-    tina.color('black')
-    tina.goto(x, y + 20)
-    tina.penup()
-    tina.goto(x, y + 10)
+tina.penup()
+tina.goto(-60,175)
 
-make_cake(0,0)
-make_cake(-100,0)
-make_cake(100,0)
+def say(something):
+    x, y = tina.pos()
+    tina.write("You told me to say this:")
+    tina.goto(x + 10, y -10)
+    tina.write(something)
+    tina.goto(x, y - 25)
+
+say("Hi there!")
+say("Hi there!")
+say("Hi there!")
 
 tina.done()
