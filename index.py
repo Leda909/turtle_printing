@@ -1,33 +1,27 @@
 import turtle
-
 tina = turtle.Turtle()
-tommy = turtle.Turtle()
-
-tina.color('darkviolet')
-tommy.color('blue')
-
 tina.shape('turtle')
-tommy.shape('turtle')
-
-tina.begin_fill()
-tina.goto(200,0)
-tina.goto(200,-200)
-tina.goto(-200,-200)
-tina.goto(-200,0)
-tina.goto(0,0)
-tina.end_fill()
-
-tommy.penup()
-tommy.goto(-70,100)
-tommy.write("Tina, let's Make a picture together!")
-tommy.goto(0,50)
-tommy.pendown()
-
 tina.penup()
-tina.color('white')
-tina.goto(-40,-100)
-tina.write("Alright, I'm ready!!")
-tina.goto(0,-130)
-tina.pendown()
+
+def line(words, horiz_pos = -50):
+    x,y = tina.pos()
+    tina.goto(max(horiz_pos, -190), y)
+    tina.write(words)
+    x,y = tina.pos()
+    tina.goto(x, y - 25)
+
+def by(author):
+    x,y = tina.pos()
+    tina.goto(x + 70, max( -190, y -30))
+    tina.write(author)
+    x,y = tina.pos()
+    tina.goto(0, y)
+
+tina.goto(-50, 190)
+line("Hope is the thing with feathers—")
+line("That perches in the soul—")
+line("And sings the tune without the words—")
+line("And never stops—at all—")
+by("Emily Dickinson")
 
 tina.done()
